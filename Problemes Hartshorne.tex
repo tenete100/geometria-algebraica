@@ -1,0 +1,81 @@
+\documentclass[11pt, a4paper]{article}
+\input{Config.tex}
+\usepackage{hyperref}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+
+
+
+
+
+\title{Problemes de Hartshorne}
+\author{Bernat Esteve Sagarra}
+
+\begin{document}
+\pagestyle{fancy}
+% 
+\lhead{Bernat Esteve}
+\rhead{Problemes de Hartshorne}
+\section*{Capítol 1}
+\begin{tcolorbox}[title=\subsection{Exercici 1.1}]
+\begin{enumerate}
+    \item Let $Y$ be the plane curve $y = x^2$ (i.e., $Y$ is the zero set of the polynomial $f = y - x^2$). Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$.
+    \item Let $Z$ be the plane curve $xy = 1$. Show that $A(Z)$ is not isomorphic to a polynomial ring in one variable over $k$.
+    \item* Let $f$ be any irreducible quadratic polynomial in $k[x,y]$, and let $W$ be the conic defined by $f$ Show that $A(W)$ is isomorphic to $A(Y)$ or $A(Z)$. Which one is it when?
+\end{enumerate}
+\end{tcolorbox}
+\subsubsection{Exercici 1.1.1}
+Hem de veure que $k[x,y]/\{x^2-y\}\simeq k[t]$.\\
+Sigui $\phi:A(Y)\to k[t]$ que envia $\ol p(x,y)\mapsto p(t,t^2)$. Ara volem veure que $\phi$ és una funció (té sentit), és injectiva, i és exhaustiva.\\[3mm]
+\textbf{Té sentit:}\\
+Sigui $\ol p=\ol q$, aleshores $p(t,t^2)-q(t,t^2)=r(t,t^2)(t^2-t^2)=0$. Per tant, si 2 funcions estan a la mateixa classe, les envia al mateix polinomi.\\[2mm]
+\textbf{És injectiva:}\\
+Sigui $\phi(f)=0$, aleshores $f(t,t^2)=0$ i per tant, $f\in I(Y)$.\\[2mm]
+\textbf{És exhaustiva:}\\
+Sigui $p\in k[t]$, aleshores $\phi(p(x))=p(t)$, i per tant, $p$ està a la imatge per $\phi$.\\[5mm]
+\subsubsection{Exercici 1.1.2}
+Notem que podem expressar $\ol p=a_0 +a_1x+a_{-1}y+\dots +a_n x+a_{-n}y^n=p_x(x)+p_y(y)$, i podem suposar que no tenim termes creuats, ja que $x^ay^b=x^{a-b}$ o $y^{b-a}$.\\[2mm]
+Notem que si $A(Z)\simeq k[t]$, aleshores tindrem que $\dim A(Z)=1$, i per tant: 
+\[
+\dim k[x,y]-\dim A(Z)=2-1=\mathrm{height}\,(Z).
+\] 
+Per tant, si veiem que $\mathrm{height} (Z)\neq 1$, ja estarem.\\
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 1.2}]
+    \textit{The Twisted Cubic Curve}. Let $Y \subseteq A^3$ be the set $Y = \{ (t,t^2 ,t^3) \mid t \in k\}$. Show that $Y$ is an affine variety of dimension 1. Find generators for the ideal $I(Y)$. Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$. We say that $Y$ is given by the parametric representation $x = t$, $y = t^2$, $z = t^3$.
+\end{tcolorbox}
+\subsubsection{Exercici 1.2}
+Considerem $\phi:k[x,y,z]/I(Y)\to k[t]$, que envia $p(x,y,z)\mapsto p(t,t^2,t^3)$, aleshores, com hem vist abans, això és un isomorfisme (es fa exactament igual). Per tant, com que la dimensió és una propietat que es defineix sobre l'estructura de $A(Y)$, és invariant per isomorfisme, i per tant, és 1.\\[3mm]
+\[\]
+Ara, per trobar generadors de l'ideal, notem que $I_y=(y-x^2)$ i $I_z(z-x^3)$ estan a $I(Y)$, per veure que generen l'ideal, construïrem una seqüència d'irreductibles, però primer notem que per (1.8A), tenim que:
+\[
+    \mathrm{height}\; I(Y) + \dim k[x,y,z]/I(Y) =3=\dim k[x,y,z]
+\]
+I pel que hem vist abans, $\height I(Y)=\dim (Y)=1$, tenim que $\dim A(Y)=2$, per tant, considerem:
+\[
+    \{(0,0,0)\}\subsetneq I_y \subsetneq I_y+I_z
+\]
+Notem que no hi pot haver cap seqüència més gran d'ideals primers.
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 1.8}]
+Let $Y$ be an affine variety of dimension $r$ in $A^n$. Let $H$ be a hypersurface in $A^n$, and assume that $Y \subsetneq H$. Then every irreducible component of $Y \cap H$ has dimension $r - 1$. (See (7.1) for a generalization.)
+\end{tcolorbox}
+\subsubsection{Exercici 1.8}
+Since $Y$ is an affine variety, let $T = I(Y)$; and let $(f)=I(H)$, where $f$ is a function (we know that it's a principal ideal since it has codimension 1). Now consider $C$ an irreductible component of $H\cap Y$, and let $\mfrk p = I(C)$ a prime ideal. With this setup, let us consider the coordinate ring of $C$:
+\[
+    k[x_1,\dots,x_n]/\mfrk p = \left( k[x_1,\dots, x_n]/T\right)/(\mfrk p/T)=A(Y)/\ol{\mfrk p}
+\]
+But by Krull's Hauptidealsatz, we know that $\mfrk p$ has height 1; since $C$ is an irreductible component of $Y\cap H$ (and thus it's the minimal prime ideal containing $f$).
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 2.1}]
+    Prove the ``homogeneous Nullstellensatz'', which says if $\mfrk a \subseteq S$ is a homogeneous ideal, and if $f\in S$ is a homogeneous polynomial with $\deg f > 0$, such that $f(P) = 0$ for all $P \in Z( a)$ in $\PP^n$, then $f^q\in \mfrk a$ for some $q > 0$. \textit{[Hint: Interpret the problem in terms of the affine $(n + 1)$-space whose affine coordinate ring is $S$, and use the usual Nullstellensatz, (1.3A).]}
+\end{tcolorbox}
+\subsubsection{Exercici 2.1}
+
+\end{document}
+% ---
+% \newpage
+% \begin{tcolorbox}[title=\subsection{Exercici XXX}]
+% \end{tcolorbox}
+% \subsubsection{Exercici XXX}
