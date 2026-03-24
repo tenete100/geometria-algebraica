@@ -72,6 +72,21 @@ But by Krull's Hauptidealsatz, we know that $\mfrk p$ has height 1; since $C$ is
     Prove the ``homogeneous Nullstellensatz'', which says if $\mfrk a \subseteq S$ is a homogeneous ideal, and if $f\in S$ is a homogeneous polynomial with $\deg f > 0$, such that $f(P) = 0$ for all $P \in Z( a)$ in $\PP^n$, then $f^q\in \mfrk a$ for some $q > 0$. \textit{[Hint: Interpret the problem in terms of the affine $(n + 1)$-space whose affine coordinate ring is $S$, and use the usual Nullstellensatz, (1.3A).]}
 \end{tcolorbox}
 \subsubsection{Exercici 2.1}
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 2.2}]
+    For a homogeneous ideal $\mfrk a \subseteq S$, show that the following conditions are equivalent:
+    \begin{enumerate}
+        \item $Z(\mfrk a)=\varnothing$.
+        \item $\sqrt{\mfrk a} = $ either $S$ or the ideal $S_+=\bigoplus_{d>0}S_d$.
+        \item $\mfrk a\supseteq S_d$ for some $d>0$.
+    \end{enumerate}
+\end{tcolorbox}
+\subsubsection{Exercici 2.2}
+\textbf{i) $\implies$ ii)}\\
+We want to use Hilbert's Nullstellensatz, which says that if we have $f\in S_+$ such that $f(p)=0$ for all $p\in Z(\mfrk a)$ (which is vacuously true), we have that $f\in \sqrt{\mfrk a}$. So we have that $S_+\subseteq \sqrt{\mfrk a}$; but the only ideal that contain $S_+$ are $S$ and $S_+$.\par
+\textbf{ii) $\implies$ iii)}\\
+Note that $x^{n_1}\in \mfrk a$ for some $n_1$ and that $y^{n_2}\in \mfrk a$ for some $n_2$. Let us consider $n>n_1,n_2$ then $x^n\in \mfrk a$ and $y^n\in \mfrk a$.\\
+Now let us consider $d=2n$, then note that in $x^iy^j$ we have either $i>n$ or $j>n$, thus either $x^i \in \mfrk a$ or $x^j \in \mfrk a$; so we have that $S_d\subseteq \mfrk a$.\par
 
 \end{document}
 % ---
