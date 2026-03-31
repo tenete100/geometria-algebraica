@@ -48,7 +48,7 @@ Per tant, si veiem que $\mathrm{height} (Z)\neq 1$, ja estarem.\\
 \subsubsection{Exercici 1.2}
 Considerem $\phi:k[x,y,z]/I(Y)\to k[t]$, que envia $p(x,y,z)\mapsto p(t,t^2,t^3)$, aleshores, com hem vist abans, això és un isomorfisme (es fa exactament igual). Per tant, com que la dimensió és una propietat que es defineix sobre l'estructura de $A(Y)$, és invariant per isomorfisme, i per tant, és 1.\\[3mm]
 \[\]
-Ara, per trobar generadors de l'ideal, notem que $I_y=(y-x^2)$ i $I_z(z-x^3)$ estan a $I(Y)$, per veure que generen l'ideal, construïrem una seqüència d'irreductibles, però primer notem que per (1.8A), tenim que:
+Ara, per trobar generadors de l'ideal, notem que $I_y=(y-x^2)$ i $I_z(z-x^3)$ estan a $I(Y)$, per veure que generen l'ideal, construirem una seqüència d'irreductibles, però primer notem que per (1.8A), tenim que:
 \[
     \mathrm{height}\; I(Y) + \dim k[x,y,z]/I(Y) =3=\dim k[x,y,z]
 \]
@@ -86,7 +86,23 @@ But by Krull's Hauptidealsatz, we know that $\mfrk p$ has height 1; since $C$ is
 We want to use Hilbert's Nullstellensatz, which says that if we have $f\in S_+$ such that $f(p)=0$ for all $p\in Z(\mfrk a)$ (which is vacuously true), we have that $f\in \sqrt{\mfrk a}$. So we have that $S_+\subseteq \sqrt{\mfrk a}$; but the only ideal that contain $S_+$ are $S$ and $S_+$.\par
 \textbf{ii) $\implies$ iii)}\\
 Note that $x^{n_1}\in \mfrk a$ for some $n_1$ and that $y^{n_2}\in \mfrk a$ for some $n_2$. Let us consider $n>n_1,n_2$ then $x^n\in \mfrk a$ and $y^n\in \mfrk a$.\\
-Now let us consider $d=2n$, then note that in $x^iy^j$ we have either $i>n$ or $j>n$, thus either $x^i \in \mfrk a$ or $x^j \in \mfrk a$; so we have that $S_d\subseteq \mfrk a$.\par
+Now let us consider $d=2n$, then note that in $x^iy^j$ we have either $i>n$ or $j>n$, thus either $x^i \in \mfrk a$ or $x^j \in \mfrk a$; so we have that $S_d\subseteq \mfrk a$ (this is the case of 2 variables, but this can be easily).\par
+Note that if $x_i^d\in \mfrk a$, then $x_i=0$ for all $i$.
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 2.3}]
+    \begin{enumerate}
+        \item If $T_1\subseteq T_2$ are subsets of $S^h$ then $Z(T_1)\supseteq T_2$.
+        \item If $Y_1\subseteq Y_2$ are subsets of $\PP^n$, then $I(Y_1)\supseteq I(Y_2)$.
+        \item For any two subsets $Y_1$, $Y_2$ of $\PP^n$, $I(Y_1\cup Y_2)=I(Y_1)\cap I(Y_2)$.
+        \item If $\mfrk a\subseteq S$ is a homogeneous ideal with $Z(\mfrk a)\neq \varnothing$, then $I(Z(\mfrk a))=\sqrt{\mfrk a}$.
+        \item For any subset $Y\subseteq \PP^n$, $Z(I(Y))=\ol Y$.
+    \end{enumerate}
+\end{tcolorbox}
+\subsubsection{Exercici 2.3}
+Note that the first 2 are true by definition.\par
+Let $Y_1$ and $Y_2$ be points of $\PP^n$, then $I(Y_1\cup Y_2)$ are the polynomials that annul $Y_1$ and $Y_2$ which is $I(Y_1)\cap I(Y_2)$.\par
+Let 
+
 
 \end{document}
 % ---
