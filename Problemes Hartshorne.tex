@@ -101,8 +101,21 @@ Note that if $x_i^d\in \mfrk a$, then $x_i=0$ for all $i$.
 \subsubsection{Exercici 2.3}
 Note that the first 2 are true by definition.\par
 Let $Y_1$ and $Y_2$ be points of $\PP^n$, then $I(Y_1\cup Y_2)$ are the polynomials that annul $Y_1$ and $Y_2$ which is $I(Y_1)\cap I(Y_2)$.\par
-Let 
+This is comes directly from applying the \textit{homogeneous Nullstellensatz}.\par
+Since $Z$ is the set of points that annul every polynomial of $I(Y)$, it must be the smallest variety that contains $Y$.
 
+\newpage
+\begin{tcolorbox}[title=\subsection{Exercici 2.4}]
+    \begin{enumerate}
+        \item There is a 1-1 inclusion-reversing correspondence between algebraic sets in $\PP^n$ and homogeneous radical ideals of $S$ not equal to $S_+$, given by $Y\mapsto I(Y)$ and $\mfrk a\mapsto Z(\mfrk a)$. \textit{Note: Since $S_+$ does not occur in this correspondence, it is sometimes calles the irrelevant maximal ideal of $S$.}
+        \item An algebraic set $Y\subseteq \PP^n$ is irreducible iff $I(Y)$ is a prime ideal.
+        \item Show that $\PP^n$ itself is irreducible.
+    \end{enumerate}
+\end{tcolorbox}
+\subsubsection{Exercici 2.4.1}
+We already know that it is inclusion reversing, so all we need to show is that it's bijective. Let us consider $X$, and $Y$ such that $I(X)=I(Y)$ then since $\ol X=Z(I(X))=Z(I(Y))=\ol Y$, and since they are varieties, we are done. To see that it's surjective, let us notice that if $Z$ is an homogeneous radical ideal of $S$ not equal to $S_+$, then $I(Z(Z))=Z$, meaning, that it's in the image of $I$.
+\subsubsection{Exercici 2.4.2}
+Remember that a variety is irreducible if there is no proper closed subset that contains it. Thus, by what we've just proven, we get that 
 
 \end{document}
 % ---
